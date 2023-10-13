@@ -29,6 +29,7 @@ dotenv.config();
 exports.default = (0, envalid_1.cleanEnv)(process.env, {
     MORALIS_API_KEY: (0, envalid_1.str)({
         desc: 'Your moralis Api key (keep this secret)',
+        devDefault: 'MORALIS_API_KEY',
     }),
     PORT: (0, envalid_1.num)({
         desc: 'Default port wher parse-server will run on',
@@ -36,7 +37,7 @@ exports.default = (0, envalid_1.cleanEnv)(process.env, {
     }),
     DATABASE_URI: (0, envalid_1.str)({
         desc: 'URI to your MongoDB database',
-        devDefault: 'mongodb://localhost:27017',
+        devDefault: 'DATABASE_URI',
     }),
     CLOUD_PATH: (0, envalid_1.str)({
         desc: 'Path to your cloud code',
@@ -51,11 +52,11 @@ exports.default = (0, envalid_1.cleanEnv)(process.env, {
     }),
     SERVER_URL: (0, envalid_1.str)({
         desc: 'Referenece to your server URL. Replace this when your app is hosted',
-        devDefault: 'http://localhost:1337/server',
+        devDefault: 'SERVER_URL',
     }),
     REDIS_CONNECTION_STRING: (0, envalid_1.str)({
         desc: 'Connection string for your redis instance in the format of redis://<host>:<port> or redis://<username>:<password>@<host>:<port>',
-        devDefault: 'redis://127.0.0.1:6379',
+        devDefault: 'REDIS_CONNECTION_STRING',
     }),
     RATE_LIMIT_TTL: (0, envalid_1.num)({
         desc: 'Rate limit window in seconds',
